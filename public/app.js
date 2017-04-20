@@ -15,7 +15,10 @@ postRating(39);
 function getMap() {
   var map = new google.maps.Map(document.querySelector(".googleMap"), {
     zoom: 13,
-    center: loc
+    center: loc,
+    disableDefaultUI: true,
+    draggable: false,
+    scrollwheel: false,
   });
   var marker = new google.maps.Marker({
     position: loc,
