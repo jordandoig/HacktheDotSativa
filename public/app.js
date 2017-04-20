@@ -52,19 +52,19 @@ function getData(loc) {
 
 function postRating(number) {
 
-  var num = Math.random()*10 * 10;
+  var num = number * 6;
   console.log(num);
 
-  if (num <= 50) {
+  if (num <= 30) {
     console.log('green');
     $(".rankingBar").attr("style", "background-color: green; width: " + num + "%;");
-  } else if (num <= 75) {
+  } else if (num <= 60) {
     $(".rankingBar").attr("style", "background-color: #FFD700; width: " + num + "%;");
   } else {
     $(".rankingBar").attr("style", "background-color: red; width: " + num + "%;");
   }
 
-  if (num > 100) {
+  if (num > 80) {
     if (swapping) {
       clearInterval(swap);
     }
