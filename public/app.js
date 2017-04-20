@@ -51,10 +51,10 @@ function getData(loc) {
 }
 
 function postRating(number) {
-  var num = number * 6;
-  if (num <= 33) {
+  var num = number * 7;
+  if (num <= 45) {
     $(".rankingBar").attr("style", "background-color: green; width: " + num + "%;");
-  } else if (num <= 66) {
+  } else if (num <= 75) {
     $(".rankingBar").attr("style", "background-color: #FFD700; width: " + num + "%;");
   } else {
     $(".rankingBar").attr("style", "background-color: red; width: " + num + "%;");
