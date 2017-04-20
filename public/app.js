@@ -81,8 +81,8 @@ function postRating(number) {
 
 function postPicture(number) {
   var num = Math.round(number / 6);
-  if (num > 10) {
-    var numRand = Math.floor(Math.random() * 10);
+  if (num > 9) {
+    var numRand = Math.floor(Math.random() * 9);
     $(".hipsterImage").attr("src", "Images/vapegod/" + numRand + ".png");
   } else {
     $(".hipsterImage").attr("src", "Images/regularclouds/vape" + num + ".png");
