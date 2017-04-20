@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+
 body {
   font-family: courier serif;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+h1 {
+  font-family: 'Shrikhand', cursive;
+  color: #333;
+  letter-spacing: .15em;
 }
 
 main {
@@ -11,36 +19,37 @@ main {
 }
 
 header {
-  background-color: #C5C5C5;
   height: 100px;
 }
 
+
 .googleMap {
-  height: 400px;
+  height: 100%;
 }
 
 .ratingBox {
   height: 400px;
-  width: 480.33px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
 .hipsterImage {
   height: 100%;
-  width: 338px;
+  width: 33%;
 }
 
 .hipsterRating {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   background-color: #c5c5c5;
-  height: 100%;
-  width: 90.06px;
+  height: 90px;
+  width: 100%;
 }
 
 .rankingBar {
-  width: 90.06px;
+  height: 90px;
+  width: 0;
 }
 
 .overload {

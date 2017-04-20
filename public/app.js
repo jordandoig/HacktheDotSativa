@@ -53,11 +53,11 @@ function getData(loc) {
 function postRating(number) {
   var num = number * 6;
   if (num <= 33) {
-    $(".rankingBar").attr("style", "background-color: green; height: " + num + "%;");
+    $(".rankingBar").attr("style", "background-color: green; width: " + num + "%;");
   } else if (num <= 66) {
-    $(".rankingBar").attr("style", "background-color: #FFD700; height: " + num + "%;");
+    $(".rankingBar").attr("style", "background-color: #FFD700; width: " + num + "%;");
   } else {
-    $(".rankingBar").attr("style", "background-color: red; height: " + num + "%;");
+    $(".rankingBar").attr("style", "background-color: red; width: " + num + "%;");
   }
   if (num > 100) {
     if (swapping) {
