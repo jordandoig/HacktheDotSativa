@@ -51,7 +51,7 @@ function getData(loc) {
 }
 
 function postRating(number) {
-  var num = number * 6;
+  var num = number * 9;
   if (num <= 33) {
     $(".rankingBar").attr("style", "background-color: green; height: " + num + "%;");
   } else if (num <= 66) {
