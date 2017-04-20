@@ -11,6 +11,7 @@ h1 {
   font-family: 'Shrikhand', cursive;
   color: #333;
   letter-spacing: .15em;
+  margin-left: 20vw;
 }
 
 main {
@@ -19,6 +20,8 @@ main {
 }
 
 header {
+  display: flex;
+  flex-direction: row;
   height: 100px;
 }
 
@@ -86,6 +89,21 @@ header {
   font-size: 2vw;
   background: hsla(215, 36%, 37%, .6);
   margin-top: 5vw;
+}
+
+#cloudLogo {
+  width: 20vw;
+}
+
+.ratings {
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 83%;
+    font-size: 2vw;
+    width: 84%;
+    right: 10%;
 }
 
 @media (min-width: 1153px) {
