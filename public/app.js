@@ -9,8 +9,8 @@ var loc = {
   lng: -104.993164
 };
 
-postPicture(39);
-postRating(39);
+postPicture(10);
+postRating(10);
 
 function getMap() {
   var map = new google.maps.Map(document.querySelector(".googleMap"), {
@@ -51,7 +51,7 @@ function getData(loc) {
 }
 
 function postRating(number) {
-  var num = Math.round(number * (10 / 6));
+  var num = number * 6;
   if (num <= 33) {
     $(".rankingBar").attr("style", "background-color: green; height: " + num + "%;");
   } else if (num <= 66) {
