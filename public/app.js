@@ -14,7 +14,7 @@ postRating(10);
 
 function getMap() {
   var map = new google.maps.Map(document.querySelector(".googleMap"), {
-    zoom: 13,
+    zoom: 12,
     center: {lat: 39.747055, lng: -104.993164},
 
     //properties disable map controls, scroll, and zoom
@@ -51,14 +51,19 @@ function getData(loc) {
 }
 
 function postRating(number) {
-  var num = number * 9;
-  if (num <= 33) {
-    $(".rankingBar").attr("style", "background-color: green; height: " + num + "%;");
-  } else if (num <= 66) {
-    $(".rankingBar").attr("style", "background-color: #FFD700; height: " + num + "%;");
+
+  var num = Math.random()*10 * 10;
+  console.log(num);
+
+  if (num <= 50) {
+    console.log('green');
+    $(".rankingBar").attr("style", "background-color: green; width: " + num + "%;");
+  } else if (num <= 75) {
+    $(".rankingBar").attr("style", "background-color: #FFD700; width: " + num + "%;");
   } else {
-    $(".rankingBar").attr("style", "background-color: red; height: " + num + "%;");
+    $(".rankingBar").attr("style", "background-color: red; width: " + num + "%;");
   }
+
   if (num > 100) {
     if (swapping) {
       clearInterval(swap);
