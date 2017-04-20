@@ -5,8 +5,8 @@
 var swapping = false;
 
 var loc = {
-  lat: 39.7392,
-  lng: -104.9903
+  lat: 39.747055,
+  lng: -104.993164
 };
 
 postPicture(39);
@@ -15,7 +15,9 @@ postRating(39);
 function getMap() {
   var map = new google.maps.Map(document.querySelector(".googleMap"), {
     zoom: 13,
-    center: loc,
+    center: {lat: 39.747055, lng: -104.993164},
+
+    //properties disable map controls, scroll, and zoom
     disableDefaultUI: true,
     draggable: false,
     scrollwheel: false,
