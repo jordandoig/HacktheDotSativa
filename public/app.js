@@ -5,17 +5,22 @@
 var swapping = false;
 
 var loc = {
-  lat: 39.7392,
-  lng: -104.9903
+  lat: 39.747055,
+  lng: -104.993164
 };
 
-postPicture(39);
-postRating(39);
+postPicture(10);
+postRating(10);
 
 function getMap() {
   var map = new google.maps.Map(document.querySelector(".googleMap"), {
     zoom: 13,
-    center: loc
+    center: {lat: 39.747055, lng: -104.993164},
+
+    //properties disable map controls, scroll, and zoom
+    disableDefaultUI: true,
+    draggable: false,
+    scrollwheel: false,
   });
   var marker = new google.maps.Marker({
     position: loc,
@@ -36,8 +41,8 @@ function getData(loc) {
   var count = 0;
   $.post("https://yelp-api-q1.herokuapp.com/search/", {
     location: latLng,
-    "radius_filter": 1000,
-    'category_filter': 'breweries,vinyl_records,divebars,comicbooks,bikes,musicvenues,usedbooks,barbers,thrift_stores,tattoo,vegan,vintage'
+    "radius_filter": 2000,
+    'category_filter': 'vapeshops,headshops,hookah_bars,cannabisdispensaries'
   }, function(data) {
     count += parseInt(data.total);
     postRating(count);
@@ -46,7 +51,7 @@ function getData(loc) {
 }
 
 function postRating(number) {
-  var num = Math.round(number * (10 / 6));
+  var num = number * 6;
   if (num <= 33) {
     $(".rankingBar").attr("style", "background-color: green; height: " + num + "%;");
   } else if (num <= 66) {
@@ -75,7 +80,7 @@ function postPicture(number) {
     var numRand = Math.floor(Math.random() * 21);
     $(".hipsterImage").attr("src", "Images/HipsterOverload/" + numRand + ".png");
   } else {
-    $(".hipsterImage").attr("src", "Images/HipsterLevels/HipsterLevel" + num + ".png");
+    $(".hipsterImage").attr("src", "Images/HipsterLevels/Vape" + num + ".png");
   }
 }
 
