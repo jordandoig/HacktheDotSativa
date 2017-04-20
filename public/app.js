@@ -36,8 +36,8 @@ function getData(loc) {
   var count = 0;
   $.post("https://yelp-api-q1.herokuapp.com/search/", {
     location: latLng,
-    "radius_filter": 1000,
-    'category_filter': 'breweries,vinyl_records,divebars,comicbooks,bikes,musicvenues,usedbooks,barbers,thrift_stores,tattoo,vegan,vintage'
+    "radius_filter": 2000,
+    'category_filter': 'vapeshops,headshops,hookah_bars,cannabisdispensaries'
   }, function(data) {
     count += parseInt(data.total);
     postRating(count);
@@ -75,7 +75,7 @@ function postPicture(number) {
     var numRand = Math.floor(Math.random() * 21);
     $(".hipsterImage").attr("src", "Images/HipsterOverload/" + numRand + ".png");
   } else {
-    $(".hipsterImage").attr("src", "Images/HipsterLevels/HipsterLevel" + num + ".png");
+    $(".hipsterImage").attr("src", "Images/HipsterLevels/Vape" + num + ".png");
   }
 }
 
