@@ -103,7 +103,7 @@ function resetCSS() {
 }
 
 function overloading() {
-  $("h1").text("HipsterOverload!");
+  $("h1").text("VapeOverload!");
   $("body").addClass("overload1");
   $("header").addClass("overload");
   $("footer").addClass("overload");
