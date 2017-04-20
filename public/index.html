@@ -1,56 +1,20 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="main.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
-  <title>HipsterRadar</title>
-</head>
-
-<body>
-  <header>
-    <h1 class="text-center">HipsterRadar!</h1>
-  </header>
-  <div class="search">
-    <input class="searchBar" type="text" name="searchBar" placeholder="ex. Denver, CO">
-    <button id="searchButton" type="button" name="searchButton">Search</button>
-  </div>
-  <main class="row">
-
-    <div class="googleMap col-md-5 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-sm-10 col-xs-10"></div>
-
-    <div class="ratingBox col-md-4 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-sm-10 col-xs-10">
-      <div class="hipsterRating">
-        <div class="rankingBar"></div>
+  <head>
+    <meta charset="utf-8">
+    <title>Denver Cloud</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  </head>
+  <body>
+    <div id='hero'>
+      <div id='title'>
+        Do You Even?
       </div>
-      <img class="hipsterImage">
+      <button id="enterButton" onclick="location.href='radar.html'">Enter</button>
+
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  </main>
-
-  <footer class="col-sm-12 col-xs-12">
-
-  </footer>
-
-
-  <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyAMqwpVZmebjRRa7u6ENy4z07akfnsIIj8",
-      authDomain: "hipsterradar.firebaseapp.com",
-      databaseURL: "https://hipsterradar.firebaseio.com",
-      storageBucket: "hipsterradar.appspot.com",
-      messagingSenderId: "882979099435"
-    };
-    firebase.initializeApp(config);
-  </script>
-  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-  <script src="app.js" charset="utf-8"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbLFtIwl7aH8u4vkTY0I0X5oZmLuezv3A&callback=getMap"></script>
-</body>
-
+  </body>
 </html>
