@@ -14,7 +14,7 @@ postRating(39);
 
 function getMap() {
   var map = new google.maps.Map(document.querySelector(".googleMap"), {
-    zoom: 13,
+    zoom: 12,
     center: {lat: 39.747055, lng: -104.993164},
 
     //properties disable map controls, scroll, and zoom
