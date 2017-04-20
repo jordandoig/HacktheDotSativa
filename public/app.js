@@ -119,9 +119,9 @@ function overloading() {
     $("header").toggleClass("overload1");
     $("footer").toggleClass("overload");
     $("footer").toggleClass("overload1");
-    $(".hipsterImage").attr("src", "Images/HipsterOverload/" + numRand + ".png");
+    $(".hipsterImage").attr("src", "Images/vapegod/" + numRand + ".png");
     numRand++;
-    if (numRand === 21) {
+    if (numRand === 10) {
       numRand = 0;
     }
     $(".rankingBar").attr("style", "background-color: " + colorCycle[colors] + "; height: " + heightCycle + "%;");
