@@ -77,10 +77,10 @@ function postRating(number) {
 function postPicture(number) {
   var num = Math.round(number / 6);
   if (num > 10) {
-    var numRand = Math.floor(Math.random() * 21);
-    $(".hipsterImage").attr("src", "Images/HipsterOverload/" + numRand + ".png");
+    var numRand = Math.floor(Math.random() * 10);
+    $(".hipsterImage").attr("src", "Images/vapegod/" + numRand + ".png");
   } else {
-    $(".hipsterImage").attr("src", "Images/HipsterLevels/Vape" + num + ".png");
+    $(".hipsterImage").attr("src", "Images/regularclouds/vape" + num + ".png");
   }
 }
 
